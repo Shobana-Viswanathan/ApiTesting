@@ -10,6 +10,8 @@
       <class name="com.tests.GetUserTest"/>
       <class name="com.tests.PostApi"/>
       <class name="com.tests.CreateUserTest"/>
+      <class name="com.tests.DeleteTest"/>
+      <class name="com.tests.PatchTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

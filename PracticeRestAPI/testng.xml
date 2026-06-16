@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.tests.Get_Trainee"/>
+      <class name="com.tests.Delete_Trainee"/>
+      <class name="com.tests.Update_TraineePut"/>
+      <class name="com.tests.InvalidLogin"/>
+      <class name="com.tests.LoginTest"/>
+      <class name="com.tests.Invalid_Trainee"/>
+      <class name="com.tests.Update_TraineePatch"/>
+      <class name="com.tests.Create_Trainee"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,24 @@
+# Eclipse Workspace
+.metadata/
+
+# Eclipse Project Files
+.project
+.classpath
+.settings/
+
+# Maven
+target/
+
+# Logs
+*.log
+
+# Java
+*.class
+
+# IDE
+.idea/
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db

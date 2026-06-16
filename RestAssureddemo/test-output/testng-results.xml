@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-15T21:07:59 IST" name="Default suite" finished-at="2026-06-15T21:08:10 IST" duration-ms="10606">
+  <suite started-at="2026-06-16T10:19:38 IST" name="Default suite" finished-at="2026-06-16T10:19:42 IST" duration-ms="4377">
     <groups>
     </groups>
-    <test started-at="2026-06-15T21:07:59 IST" name="Default test" finished-at="2026-06-15T21:08:10 IST" duration-ms="10606">
-      <class name="com.tests.GetPostApi">
-        <test-method signature="getTest()[pri:0, instance:com.tests.GetPostApi@15de0b3c]" started-at="2026-06-15T21:07:59 IST" name="getTest" finished-at="2026-06-15T21:08:10 IST" duration-ms="10477" status="PASS">
+    <test started-at="2026-06-16T10:19:38 IST" name="Default test" finished-at="2026-06-16T10:19:42 IST" duration-ms="4377">
+      <class name="com.tests.PatchTest">
+        <test-method signature="patchToUpdatePartially()[pri:0, instance:com.tests.PatchTest@15de0b3c]" started-at="2026-06-16T10:19:38 IST" name="patchToUpdatePartially" finished-at="2026-06-16T10:19:42 IST" duration-ms="4317" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getTest -->
-      </class> <!-- com.tests.GetPostApi -->
+        </test-method> <!-- patchToUpdatePartially -->
+      </class> <!-- com.tests.PatchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

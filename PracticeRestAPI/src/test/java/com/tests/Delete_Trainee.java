@@ -9,9 +9,11 @@ import io.restassured.response.Response;
 public class Delete_Trainee {
   @Test
   public void deletetrainee() {
-	  Response response=RestAssured.given().when().delete("http://localhost:3000/trainees/p0tCRMQqC5Y");
+	  Response response=RestAssured.given().when().delete("http://localhost:3000/trainees/_nCiUcE8TX8");
 	  System.out.println("Status code:"+response.getStatusCode());
 	  response.prettyPrint();
-	  Assert.assertEquals(response.getStatusCode(), 200);
+	  response
+	  .then()
+	  .statusCode(200);
   }
 }

@@ -26,7 +26,7 @@ public class InvalidLogin {
 			
 			response.prettyPrint();
 			
-			Assert.assertEquals(response.getStatusCode(),401);
-		  
+            response.
+            then().statusCode(401);		  
   }
 }

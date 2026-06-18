@@ -4,82 +4,71 @@
   <artifactId>RestAssuredLmsApi</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  <dependencies>
-		<!--  Source:
-		https://mvnrepository.com/artifact/io.rest-assured/rest-assured  -->
-		<dependency>
-			<groupId>io.rest-assured</groupId>
-			<artifactId>rest-assured</artifactId>
-			<version>6.0.0</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- Source:
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>4.44.0</version>
-			<scope>compile</scope>
-		</dependency>
+		<!-- TestNG -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.12.0</version>
 			<scope>test</scope>
 		</dependency>
-		<!--  Source:
-		https://mvnrepository.com/artifact/tools.jackson.core/jackson-databind  -->
+
+		<!-- Rest Assured -->
 		<dependency>
-			<groupId>tools.jackson.core</groupId>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.5.6</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Jackson -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>3.2.0</version>
-			<scope>compile</scope>
+			<version>2.20.0</version>
 		</dependency>
-		<!-- Source: https://mvnrepository.com/artifact/org.json/json -->
+
+		<!-- Selenium -->
 		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20260522</version>
-			<scope>compile</scope>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.44.0</version>
 		</dependency>
-		<!-- Source:
-		https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+
+		<!-- Allure TestNG -->
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-testng</artifactId>
-			<version>2.35.2</version>
-			<scope>compile</scope>
+			<version>2.35.1</version>
+			<scope>test</scope>
 		</dependency>
-		<!-- Source:
-		https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
+		<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.2</version>
+</dependency>
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-maven</artifactId>
-			<version>3.0.1</version>
-			<scope>compile</scope>
+			<artifactId>allure-testng</artifactId>
+			<version>2.35.1</version>
+			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.15.0</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.6.0-M1</version>
+				<version>3.5.3</version>
 				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
+					<systemPropertyVariables>
+						<allure.results.directory>
+							target/allure-results
+						</allure.results.directory>
+					</systemPropertyVariables>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

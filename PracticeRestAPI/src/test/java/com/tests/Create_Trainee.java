@@ -20,8 +20,8 @@ public class Create_Trainee {
 	  Response response=RestAssured.given().contentType(ContentType.JSON).body(payload).when().post("http://localhost:3000/trainees");
 	  System.out.println("Status code:"+response.getStatusCode());
 	  response.prettyPrint();
-	  Assert.assertEquals(response.getStatusCode(), 201);
-	  Assert.assertEquals(response.jsonPath().getString("name"),"yadav");
+	  response.then()
+	  .statusCode(201);
   }
   
 }

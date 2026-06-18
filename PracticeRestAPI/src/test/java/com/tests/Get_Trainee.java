@@ -17,6 +17,8 @@ public class Get_Trainee {
       response.then().statusCode(200);
 	  Assert.assertEquals(response.jsonPath().getString("company"),"expleo");
       response.prettyPrint();
+      response.then()
+      .statusCode(200);
 
   }
 }

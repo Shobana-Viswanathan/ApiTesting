@@ -11,8 +11,8 @@ public class Invalid_Trainee {
   public void invalidtrainee() {
 	  Response response=RestAssured.given().when().get("http://localhost:3000/trainees/1");
       System.out.println("Status code:"+response.getStatusCode());
-	  Assert.assertEquals(response.getStatusCode(),404);
-	  
+      response
+      .then().statusCode(404);	  
 	  
   }
 }

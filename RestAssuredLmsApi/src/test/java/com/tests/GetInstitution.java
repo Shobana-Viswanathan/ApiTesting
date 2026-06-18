@@ -16,7 +16,6 @@ public class GetInstitution extends BaseUrl {
 			  .get(url+"getAll/institution");
       System.out.println("Status code:"+response.getStatusCode());
       response.prettyPrint();
-      Assert.assertEquals(response.getStatusCode(), 200);
-	  
+      response.then().statusCode(200);	  
   }
 }

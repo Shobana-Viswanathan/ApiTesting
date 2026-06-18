@@ -15,7 +15,8 @@ public class HealthCheckGetTest extends BaseUrl {
 			  .when()
 			  .get(url);
 	  System.out.println(response.getStatusCode());
-	  Assert.assertEquals(response.getStatusCode(),200);
-      response.then().body(containsString("API Running"));	  
+	  response.then().statusCode(200);
+	  response.then().body(containsString("API Running"));	  
   }
 }
+

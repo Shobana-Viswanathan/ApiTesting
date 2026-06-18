@@ -40,7 +40,13 @@
     <type>pom</type>
     <scope>import</scope>
 </dependency>
-
+<!-- Source: https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-maven</artifactId>
+    <version>3.0.1</version>
+    <scope>compile</scope>
+</dependency>
 <!-- Extent Reports -->
 <dependency>
     <groupId>com.aventstack</groupId>

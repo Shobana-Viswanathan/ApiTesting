@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class GetRoles extends BaseUrl {
+public class GetNotes extends BaseUrl {
 
     @BeforeClass
     public void login() {
@@ -16,19 +16,20 @@ public class GetRoles extends BaseUrl {
     }
 
     @Test
-    public void getRoles() {
+    public void getAllNotes() {
 
         String url = get_url();
 
-        Response res = RestAssured
+        Response response = RestAssured
                 .given()
                 .header("Authorization", "Bearer " + AuthenticationTest.token)
-                .when()
-                .get(url + "roles/getAll");
+                .get(url + "getAll/notes");
+              
 
-        res.prettyPrint();
+        response.prettyPrint();
 
-        res.then()
-           .statusCode(200);
+        response.then()
+                .statusCode(200);
+
     }
 }

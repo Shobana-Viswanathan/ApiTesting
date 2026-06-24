@@ -29,6 +29,41 @@ public class LoginTest extends BaseUrl{
 	  System.out.println("Token = " + token);
 	  
   }
+  @Test
+  public void invalidusername() {
+	  String url=get_url();
+	  Map<String,Object> payload=new HashMap<>();
+	  payload.put("email", "s@gmail.com");
+	  payload.put("password","123");
+	  Response response=RestAssured.given()
+			  .contentType(ContentType.JSON)
+			  .body(payload)
+			  .when()
+			  .post(url+"user/login");
+	  System.out.println("Status code:"+response.getStatusCode());
+	  response.prettyPrint();
+	  Assert.assertEquals(response.getStatusCode(),400);
+	  String token = response.jsonPath().getString("token");
+	  System.out.println("Token = " + token);
+  }
+  @Test
+  public void invalidpassword() {
+	  String url=get_url();
+	  Map<String,Object> payload=new HashMap<>();
+	  payload.put("email", "s@gmail.com");
+	  payload.put("password","133");
+	  Response response=RestAssured.given()
+			  .contentType(ContentType.JSON)
+			  .body(payload)
+			  .when()
+			  .post(url+"user/login");
+	  System.out.println("Status code:"+response.getStatusCode());
+	  response.prettyPrint();
+	  Assert.assertEquals(response.getStatusCode(),400);
+	  String token = response.jsonPath().getString("token");
+	  System.out.println("Token = " + token);
+  }
+  
 }
 		
 		

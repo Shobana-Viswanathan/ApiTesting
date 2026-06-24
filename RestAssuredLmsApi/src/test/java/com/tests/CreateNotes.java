@@ -55,4 +55,15 @@ public class CreateNotes extends BaseUrl {
         Assert.assertEquals(response.jsonPath().getString("message"),
                             "Note created successfully");
     }
+    @Test
+    public void without_token() {
+    	String url=get_url();
+    	Response response = RestAssured
+                .given()
+                .contentType(ContentType.JSON)
+                .when()
+                .post(url + "create/notes");
+    	        Assert.assertEquals(response.getStatusCode(),401);
+               response.prettyPrint();
+    }
 }

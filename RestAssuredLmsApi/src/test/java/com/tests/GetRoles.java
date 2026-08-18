@@ -28,7 +28,47 @@ public class GetRoles extends BaseUrl {
 
         res.prettyPrint();
 
+        System.out.println("Status Code: " + res.getStatusCode());
+
         res.then()
            .statusCode(200);
+    }
+
+    @Test
+    public void getRoleInvalidToken() {
+
+        String url = get_url();
+
+        Response res = RestAssured
+                .given()
+                .header("Authorization", "Bearer invalidtoken123")
+                .when()
+                .get(url + "roles/getAll");
+
+        res.prettyPrint();
+
+        System.out.println("Status Code: " + res.getStatusCode());
+
+        res.then()
+           .statusCode(401);
+    }
+
+    @Test
+    public void getRoleInvalidEndpoint() {
+
+        String url = get_url();
+
+        Response res = RestAssured
+                .given()
+                .header("Authorization", "Bearer " + AuthenticationTest.token)
+                .when()
+                .get(url + "roles/getAlll");
+
+        res.prettyPrint();
+
+        System.out.println("Status Code: " + res.getStatusCode());
+
+        res.then()
+           .statusCode(404);
     }
 }

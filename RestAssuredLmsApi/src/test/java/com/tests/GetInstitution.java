@@ -18,4 +18,19 @@ public class GetInstitution extends BaseUrl {
       response.prettyPrint();
       response.then().statusCode(200);	  
   }
+  @Test
+  public void invalid() {
+      String url = get_url();
+
+      Response res = RestAssured
+              .given()
+              .when()
+              .get(url + "getAll");
+
+      System.out.println("Status Code: " + res.getStatusCode());
+      res.prettyPrint();
+
+      res.then().statusCode(404);
+  }
+  
 }
